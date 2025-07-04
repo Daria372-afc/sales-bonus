@@ -139,7 +139,10 @@ function analyzeSalesData(data, options) {
         const sorted = Object.entries(seller.products_sold)
         .sort((a, b) => b[1] - a[1])
         .slice(0,10)
-        .map(entry => entry[0]);
+        .map(([sku, quantity]) => ({
+            sku,
+            quantity
+        }));
 
         seller.top_products = sorted;
     });
