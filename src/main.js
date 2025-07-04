@@ -109,9 +109,9 @@ function analyzeSalesData(data, options) {
         const revenue = calculateRevenue(item, product);
 
         //Прибыль = выручка - себестимость
-        const profit = revenue - cost; 
+        const profit = revenue - cost;
 
-        //Добавляем прибыль продавцу 
+        //Добавляем прибыль продавцу
         seller.profit += profit;
 
         //Учёт проданных единиц товара
